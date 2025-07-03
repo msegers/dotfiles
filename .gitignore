@@ -1,0 +1,11 @@
+# Ignore all the things!
+*
+
+# Except
+!.gitignore
+!/.config
+!/.config/hypr
+!/.config/hypr/*
+
+
+
