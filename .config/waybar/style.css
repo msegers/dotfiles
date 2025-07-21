@@ -1,23 +1,41 @@
-@define-color text rgba(255,255,255,0.9);
-@define-color text-active rgba(0,0,0,0.9);
+@define-color text rgba(255,255,255,0.7);
 @define-color bg rgba(0,0,0,0.6);
+
+@define-color text-active rgba(0,0,0,1);
 @define-color bg-active rgba(255,255,255,1);
+
+@define-color bg-hover rgba(255,255,255,0.4);
+@define-color text-hover rgba(0,0,0,0.7);
+
 @define-color transparent rgba(0,0,0,0);
 
+@define-color bg-window rgba(0,0,0,0.7);
+
 * {
-  font-family: "Noto Sans", "Noto Sans Symbols", sans-serif, "Noto Color Emoji", "Adwaita Sans";
-  font-size: 12px;
-
-
+  font-family: sans-serif;
+  font-size: 13px;
   font-weight: bold;
   color: @text;
 }
 
-#waybar {
-  background: transparent;
+widget window menu {
+  background: @bg-window;
+}
+widget window menuitem:hover {
+  background: @bg-hover;
 }
 
-#workspaces {
+widget window menuitem:hover label {
+  color: @text-hover;
+}
+
+widget window label {
+  color: @text;
+  font-family: sans-serif;
+}
+
+#waybar {
+  background: transparent;
 }
 
 .module {
@@ -40,12 +58,11 @@ button {
 
 button label {
   background: @transparent;
-  margin:0;
+  margin: 0;
   min-width: 24px;
   min-height: 24px;
   padding: 0;
-  border-radius: 50px;
-  -gtk-outline-radius: 0px;
+  border-radius: 4px;
   outline-offset: 0;
 }
 
@@ -58,11 +75,12 @@ button box {
 }
 
 button:hover {
+  background: transparent;
 }
 
 button:hover label {
-  background: rgba(255,255,255,0.4);
-  color: @text-active
+  background: @bg-hover;
+  color: @text-hover;
 }
 
 button.active {
@@ -73,14 +91,18 @@ button.active label {
   background: @bg-active;
 }
 
-.modules-left, .modules-center, .modules-right {
-  margin: 4px 0;
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 4px 0 0 0;
   background: @bg;
-  border-radius: 50px;
+  border-radius: 5px;
+  padding: 0px;
 }
 
-label {
-  padding: 0 12px;
+label,
+#tray image {
+  padding: 0 8px;
 }
 
 .modules-left {
@@ -90,4 +112,3 @@ label {
 .modules-right {
   margin-right: 8px;
 }
-
