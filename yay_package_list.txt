@@ -1,0 +1,9 @@
+yay
+yay-debug
+discord_arch_electron
+lib32-gtk2
+lib32-libpulse
+lib32-libsm
+lib32-libvdpau
+lib32-openal
+lib32-sdl12-compat
