@@ -35,7 +35,6 @@ pipewire-pulse
 playerctl
 pulseaudio-alsa
 spotify-launcher
-steam
 telegram-desktop
 ttf-noto-nerd
 unzip
@@ -45,4 +44,4 @@ waybar
 wget
 wireplumber
 wofi
-xwaylandvideobridge-git
+starship

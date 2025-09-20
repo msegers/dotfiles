@@ -15,3 +15,5 @@
 !/wp/*
 !/kwalletrc
 !/*package_list.txt
+!/setup.sh
+!/bash-extend
