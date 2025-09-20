@@ -1,0 +1,64 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 24,
+  "spacing": 5,
+  "reload_style_on_change": true,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["cpu", "memory", "clock", "group/power", "tray"], // Group Configuration
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/power", // First element is the "group leader" and won't ever be hidden
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot",
+    ],
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "󰍛 {usage}%",
+    "tooltip": "CPU Usage {usage}%",
+    "on-click": "",
+  },
+  "memory": {
+    "format": " {percentage}%",
+    "on-click": "",
+    "tooltip": "Memory usage {percentage}%",
+  },
+  "clock": {
+    "interval": 60,
+    "format": "{:%a %e %b %H:%M}",
+    "tooltip": false,
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip": true,
+    "tooltip-format": "Quit",
+    "on-click": "hyprctl dispatch exit",
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": true,
+    "tooltip-format": "Lock",
+    "on-click": "hyprlock",
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip": true,
+    "tooltip-format": "Reboot",
+    "on-click": "systemctl reboot",
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Shutdown",
+    "on-click": "shutdown now",
+  },
+}

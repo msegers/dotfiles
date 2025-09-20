@@ -1,0 +1,16 @@
+# Ignore all the things!
+*
+
+# Except
+!.gitignore
+!/hypr
+!/hypr/*
+!/waybar
+!/waybar/*
+!/fontconfig/
+!/fontconfig/*
+!/nvim/
+!/nvim/*
+!/wp/
+!/wp/*
+!/kwalletrc
